@@ -1,0 +1,34 @@
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LotteryElite.csprojResolveAssemblyReference.cache
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\App.g.cs
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LotteryElite_MarkupCompile.cache
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LotteryElite.g.resources
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\bin\Debug\LotteryElite.exe.config
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\bin\Debug\LotteryElite.exe
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\bin\Debug\LotteryElite.pdb
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LotteryElite.exe
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LotteryElite.pdb
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\MainWindow1.baml
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\MainWindow1.g.cs
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LogWindow.baml
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\BetWindow.baml
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\LogWindow.g.cs
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\BetWindow.g.cs
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\Sign.baml
+F:\Games\Sharpdevelop\Projects\LotteryElite\LotteryElite\obj\Debug\Sign.g.cs
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\bin\Debug\LotteryElite.exe.config
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\bin\Debug\LotteryElite.exe
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\bin\Debug\LotteryElite.pdb
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LotteryElite.csprojResolveAssemblyReference.cache
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\MainWindow1.baml
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LogWindow.baml
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\BetWindow.baml
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\Sign.baml
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\MainWindow1.g.cs
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LogWindow.g.cs
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\BetWindow.g.cs
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\Sign.g.cs
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\App.g.cs
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LotteryElite_MarkupCompile.cache
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LotteryElite.g.resources
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LotteryElite.exe
+C:\Users\Maxim\Documents\SharpDevelop projects\LotteryElite\obj\Debug\LotteryElite.pdb

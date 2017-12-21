@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="LotteryElite.MainWindow1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="LotteryElite"
+	Foreground="White"
+	Height="560"
+	Width="744"
+	ResizeMode="NoResize">
+	<Grid
+		Width="728"
+		Background="#FFADC6DD"
+		Height="529">
+		<TabControl
+			Height="549"
+			Width="728"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="0,-2,0,0"
+			VerticalContentAlignment="Top"
+			x:Name="TabC"
+			Background="#FF98C4E0"
+			Foreground="#FF4A84BA">
+			<TabItem
+				RenderTransformOrigin="0.5,0.5"
+				Width="188"
+				Header="Профиль">
+				<!-- ="===================================================================PROFILE====================================================================" -->
+				<StackPanel
+					x:Name="MainStack"
+					Orientation="Vertical"
+					VerticalAlignment="Top"
+					Height="489"
+					Width="722"
+					Background="#FFB5D3E5">
+					<!--=================== MAINSTACK =================-->
+					<StackPanel
+						Orientation="Horizontal"
+						Margin="0,10,0,0"
+						x:Name="StackLabels"
+						Height="26"
+						Width="716">
+						<!-- ================= StackLabels ================= -->
+						<Label
+							Height="25"
+							Content="Мой профиль"
+							HorizontalContentAlignment="Left"
+							Width="328"
+							Margin="10,0,0,0" />
+						<Label
+							Height="30"
+							HorizontalAlignment="Center"
+							Content="Моя статистика"
+							HorizontalContentAlignment="Left"
+							Margin="30,0,0,0"
+							Width="157" />
+						<Button
+							Content="Обновить"
+							HorizontalAlignment="Right"
+							Click="RefreshData_Click"
+							Margin="100,0,0,0"
+							FontSize="14"
+							Width="81" />
+					</StackPanel>
+					<!-- ================= /StackLabels =================-->
+					<StackPanel
+						x:Name="ProfileData"
+						Orientation="Horizontal"
+						VerticalAlignment="Top"
+						HorizontalAlignment="Center"
+						Margin="0,0,0,0"
+						Height="209"
+						Width="724">
+						<!-- ================= ProfileData =================-->
+						<Border
+							x:Name="UserDataBorder"
+							Margin="10,0,0,0"
+							BorderThickness="1,1,1,1"
+							Height="203"
+							VerticalAlignment="Center"
+							Width="345"
+							BorderBrush="Black"
+							Visibility="Visible">
+							<StackPanel
+								x:Name="UserData"
+								Orientation="Vertical"
+								VerticalAlignment="Top"
+								Height="201"
+								Width="342"
+								IsEnabled="True"
+								IsHitTestVisible="True"
+								Visibility="Visible">
+								<!-- ================= UserData =================-->
+								<StackPanel
+									x:Name="LogStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="342">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										Width="70"
+										HorizontalContentAlignment="Left"
+										Margin="45,0,0,0"
+										FontSize="14"
+										Content="Логин" />
+									<TextBox
+										x:Name="DataLogBox"
+										Margin="30,5,0,0"
+										Width="130"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28" />
+								</StackPanel>
+								<StackPanel
+									x:Name="PassStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="344">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										Width="70"
+										HorizontalContentAlignment="Left"
+										Margin="45,0,0,0"
+										FontSize="14"
+										Content="Пароль" />
+									<TextBox
+										x:Name="DataPassBox"
+										Margin="30,5,0,0"
+										Width="130"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28" />
+								</StackPanel>
+								<StackPanel
+									x:Name="PermStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="342">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										Margin="45,0,0,0"
+										FontSize="14"
+										Width="79"
+										Content="Доступ" />
+									<TextBlock
+										x:Name="DataPermBlock"
+										Width="130"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28"
+										Margin="22,10,0,0">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									Height="40"
+									Orientation="Horizontal"
+									Width="343">
+									<Label
+										Content="ID"
+										Height="40"
+										VerticalContentAlignment="Center"
+										Width="30"
+										HorizontalContentAlignment="Left"
+										Margin="45,0,0,0"
+										FontSize="14" />
+									<TextBlock
+										x:Name="IdBlock"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Margin="5,10,0,0"
+										Height="28"
+										Width="66">
+										<Run />
+									</TextBlock>
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										Margin="15,0,0,0"
+										FontSize="14"
+										Width="54"
+										Content="Очки" />
+									<TextBlock
+										x:Name="MoneyBlock"
+										Width="80"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Margin="5,10,0,0"
+										Height="28">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center">
+									<Button
+										Height="27"
+										Width="139"
+										Margin="0,7,0,0"
+										FontSize="14"
+										x:Name="SubmitButton"
+										Click="SubmitButton_Click"
+										Content="Применить" />
+									<Button
+										Height="27"
+										Width="139"
+										FontSize="14"
+										x:Name="LogOutButton"
+										Click="LogOutButton_Click"
+										Margin="20,7,0,0"
+										Content="Выйти" />
+								</StackPanel>
+							</StackPanel>
+						</Border>
+						<Border
+							x:Name="StatsDataBorder"
+							Margin="10,0,0,0"
+							BorderThickness="1,1,1,1"
+							VerticalAlignment="Center"
+							Width="345"
+							BorderBrush="Black"
+							Height="203">
+							<StackPanel
+								x:Name="StatData"
+								Orientation="Vertical"
+								VerticalAlignment="Top"
+								Height="200"
+								Width="344">
+								<!-- ================= StatsData =================-->
+								<StackPanel
+									x:Name="AllGamesStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="342">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Margin="35,0,0,0"
+										Width="176"
+										Content="Сыграно игр" />
+									<TextBlock
+										x:Name="AllGamesBlock"
+										VerticalAlignment="Center"
+										Width="90"
+										FontSize="14"
+										Height="28"
+										Margin="25,10,0,0">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									x:Name="ActiveGamesStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="342">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Активные игры"
+										Margin="35,0,0,0"
+										Width="176" />
+									<TextBlock
+										x:Name="ActiveGamesBlock"
+										VerticalAlignment="Center"
+										Width="90"
+										FontSize="14"
+										Height="28"
+										Margin="25,10,0,0">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									x:Name="MoneyGainedStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="341">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Заработано"
+										Margin="35,0,0,0"
+										Width="176" />
+									<TextBlock
+										x:Name="MoneyGainedBlock"
+										VerticalAlignment="Center"
+										Width="90"
+										FontSize="14"
+										Height="28"
+										Margin="25,10,0,0">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									x:Name="LastPrizeStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="343">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Последний выигрыш"
+										Margin="35,0,0,0"
+										Width="176" />
+									<TextBlock
+										x:Name="LastPrizeBlock"
+										VerticalAlignment="Center"
+										Width="90"
+										FontSize="14"
+										Height="28"
+										Margin="25,10,0,0">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									x:Name="MaxPrizeStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="341">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Максимальный выигрыш"
+										Width="176"
+										Margin="35,0,0,0" />
+									<TextBlock
+										x:Name="MaxPrizeBlock"
+										VerticalAlignment="Center"
+										Width="90"
+										FontSize="14"
+										Height="28"
+										Margin="25,10,0,0">
+										<Run />
+									</TextBlock>
+								</StackPanel>
+							</StackPanel>
+						</Border>
+					</StackPanel>
+					<!-- ================= /ProfileData =================-->
+					<StackPanel
+						x:Name="MyGames"
+						Margin="0,10,0,0"
+						Height="227"
+						Width="722"
+						Orientation="Vertical">
+						<Label
+							Content="Мои игры"
+							Width="680" />
+						<DataGrid
+							x:Name="MyGamesGrid"
+							RowHeight="40"
+							VerticalScrollBarVisibility="Auto"
+							Width="704"
+							Height="214">
+							<DataGrid.Columns>
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="ID"
+									Width="40"
+									FontSize="14"
+									Binding="{Binding Path = P1}"
+									ContextMenuService.IsEnabled="True" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="Тип игры"
+									Width="60"
+									FontSize="14"
+									Binding="{Binding Path = P2}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									FontSize="14"
+									Header="Призовой фонд"
+									Width="100"
+									Binding="{Binding Path = P3}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									FontSize="14"
+									Header="Стоимость билета"
+									Width="110"
+									Binding="{Binding Path = P4}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="Выигрышная комбинация"
+									Width="157"
+									FontSize="14"
+									Binding="{Binding Path = P5}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									x:Name="MyCombColumn"
+									Header="Моя комбинация"
+									Width="157"
+									Binding="{Binding Path = P7}"
+									FontSize="14" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									x:Name="StatusColumn"
+									Header="Статус"
+									Width="82"
+									Binding="{Binding Path = P6}"
+									FontSize="14" />
+							</DataGrid.Columns>
+						</DataGrid>
+					</StackPanel>
+					<!-- ================= MyGames ================= -->
+				</StackPanel>
+				<!-- ================= /MAINSTACK ================= -->
+			</TabItem>
+			<!-- ="===================================================================/PROFILE====================================================================" -->
+			<TabItem
+				Width="216"
+				x:Name="TabGames"
+				Header="Все игры">
+				<!-- ="===================================================================GAMES====================================================================" -->
+				<StackPanel
+					x:Name="GamesMainStack"
+					Orientation="Vertical"
+					Height="511"
+					Width="721">
+					<Label
+						Content="Все игры"
+						Width="666" />
+					<DataGrid
+						x:Name="AllGamesGrid"
+						MouseDoubleClick="Double_Click"
+						Width="691"
+						Height="355">
+						<DataGrid.Columns>
+							<DataGridTextColumn
+								IsReadOnly="true"
+								Header="ID"
+								Width="60"
+								FontSize="14"
+								Binding="{Binding Path = P1}"
+								ContextMenuService.IsEnabled="True" />
+							<DataGridTextColumn
+								IsReadOnly="true"
+								Header="Тип игры"
+								Width="95"
+								FontSize="14"
+								Binding="{Binding Path = P2}" />
+							<DataGridTextColumn
+								IsReadOnly="true"
+								FontSize="14"
+								Header="Призовой фонд"
+								Width="100"
+								Binding="{Binding Path = P3}" />
+							<DataGridTextColumn
+								IsReadOnly="true"
+								FontSize="14"
+								Header="Стоимость билета"
+								Width="130"
+								Binding="{Binding Path = P4}" />
+							<DataGridTextColumn
+								IsReadOnly="true"
+								Header="Выигрышная комбинация"
+								Width="203"
+								FontSize="14"
+								Binding="{Binding Path = P5}" />
+							<DataGridTextColumn
+								IsReadOnly="true"
+								Header="Статус"
+								Width="100"
+								Binding="{Binding Path = P6}"
+								FontSize="14" />
+						</DataGrid.Columns>
+					</DataGrid>
+					<StackPanel
+						Orientation="Horizontal"
+						Width="691"
+						HorizontalAlignment="Center"
+						Height="120">
+						<Button
+							Content="Обновить игры"
+							x:Name="RefreshAllGamesButton"
+							Click="RefreshAllGamesButton_Click"
+							FontSize="28"
+							Margin="195,0,0,0"
+							Height="58"
+							Width="304" />
+					</StackPanel>
+				</StackPanel>
+			</TabItem>
+			<!-- ="===================================================================/GAMES====================================================================" -->
+			<TabItem
+				Width="176"
+				x:Name="TabAdminPanel"
+				Header="Коптильня"
+				Visibility="Visible">
+				<!-- ="==========================================================ADMIN_PANEL=============================================" -->
+				<StackPanel
+					Orientation="Vertical"
+					Width="719"
+					VerticalAlignment="Top"
+					Height="499"
+					Background="#FFB5D3E5">
+					<Label
+						Height="26"
+						Width="148"
+						HorizontalAlignment="Left"
+						Margin="25,0,0,0"
+						Content="Поиск" />
+					<Border
+						BorderBrush="Black"
+						BorderThickness="1,1,1,1"
+						Margin="0,0,0,0"
+						Width="673"
+						Height="42">
+						<StackPanel
+							Width="673"
+							Height="42"
+							VerticalAlignment="Top"
+							Orientation="Horizontal">
+							<TextBlock
+								x:Name="FindTextBlock"
+								Margin="30,0,0,0"
+								VerticalAlignment="Center"
+								HorizontalAlignment="Center"
+								FontSize="14"
+								TextAlignment="Center"
+								Height="24"
+								Width="167">
+								<Run
+									Text="Введите Id или Login" />
+							</TextBlock>
+							<TextBox
+								Height="24"
+								Margin="20,0,0,0"
+								Width="160"
+								x:Name="FindTextBox" />
+							<ComboBox
+								Width="113"
+								HorizontalAlignment="Center"
+								HorizontalContentAlignment="Center"
+								VerticalContentAlignment="Center"
+								VerticalAlignment="Center"
+								SelectedIndex="0"
+								Height="25"
+								Margin="30,0,0,0"
+								x:Name="TypeComboBox"
+								SelectionChanged="ComboBox_Select"
+								RenderTransformOrigin="0.5,0.5">
+								<Label
+									Content="Пользователь" />
+								<Label
+									Content="Игра" />
+								<Label
+									Content="Билет" />
+							</ComboBox>
+							<Button
+								Content="Поиск"
+								Height="25"
+								Margin="20,0,0,0"
+								Width="88"
+								IsEnabled="True"
+								x:Name="FindButton"
+								Click="FindButton_Click"
+								RenderTransformOrigin="0.5,0.5" />
+						</StackPanel>
+					</Border>
+					<!-- ================= StackLabels ================= -->
+					<StackPanel
+						Orientation="Horizontal">
+						<Label
+							HorizontalContentAlignment="Center"
+							Width="356"
+							Content="Информация"
+							Height="26" />
+						<Label
+							Margin="0,0,0,0"
+							HorizontalAlignment="Center"
+							HorizontalContentAlignment="Center"
+							Width="348"
+							Content="Опции"
+							Height="24" />
+					</StackPanel>
+					<!-- ================= /StackLabels =================-->
+					<StackPanel
+						x:Name="FindProfileData"
+						Orientation="Horizontal"
+						VerticalAlignment="Top"
+						HorizontalAlignment="Center"
+						Margin="0,0,0,0"
+						Width="724"
+						Height="164"
+						IsEnabled="False">
+						<!-- ================= ProfileData =================-->
+						<Border
+							x:Name="FindUserDataBorder"
+							Margin="10,0,0,0"
+							BorderThickness="1,1,1,1"
+							Width="345"
+							BorderBrush="Black"
+							Visibility="Visible"
+							Height="164"
+							VerticalAlignment="Top"
+							IsEnabled="True">
+							<StackPanel
+								x:Name="FindUserData"
+								Orientation="Vertical"
+								VerticalAlignment="Top"
+								Width="342"
+								IsEnabled="True"
+								IsHitTestVisible="True"
+								Visibility="Visible"
+								Height="160">
+								<!-- ================= UserData =================-->
+								<StackPanel
+									x:Name="FindLogStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="342">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Логин"
+										x:Name="FindDataP1"
+										Width="100"
+										Margin="42,0,0,0" />
+									<TextBox
+										x:Name="FindDataLogBox"
+										Margin="30,5,0,0"
+										Width="130"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28" />
+								</StackPanel>
+								<StackPanel
+									x:Name="FindPassStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="344">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Пароль"
+										x:Name="FindDataP2"
+										Width="100"
+										Margin="42,0,0,0" />
+									<TextBox
+										x:Name="FindDataPassBox"
+										Margin="30,5,0,0"
+										Width="130"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28" />
+								</StackPanel>
+								<StackPanel
+									x:Name="FindPermStack"
+									Orientation="Horizontal"
+									Height="40"
+									Width="342">
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										Content="Доступ"
+										x:Name="FindDataP3"
+										Width="100"
+										Margin="42,0,0,0" />
+									<TextBox
+										x:Name="FindDataPermBox"
+										Margin="30,5,0,0"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28"
+										Width="132" />
+								</StackPanel>
+								<StackPanel
+									Height="40"
+									Orientation="Horizontal"
+									Width="343">
+									<Label
+										Content="ID"
+										Height="40"
+										VerticalContentAlignment="Center"
+										Width="30"
+										HorizontalContentAlignment="Left"
+										FontSize="14"
+										x:Name="FindDataP4"
+										Margin="30,0,0,0" />
+									<TextBlock
+										x:Name="FindDataIdBox"
+										Width="66"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28"
+										Margin="20,5,0,0" />
+									<Label
+										Height="40"
+										VerticalContentAlignment="Center"
+										HorizontalContentAlignment="Left"
+										Margin="15,0,0,0"
+										FontSize="14"
+										Width="54"
+										Content="Очки"
+										x:Name="FindDataP5" />
+									<TextBox
+										x:Name="FindDataPointBox"
+										Width="80"
+										VerticalAlignment="Center"
+										FontSize="14"
+										Height="28"
+										Margin="15,5,0,0" />
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"></StackPanel>
+							</StackPanel>
+						</Border>
+						<Border
+							x:Name="FindStatsDataBorder"
+							Margin="10,0,0,0"
+							BorderThickness="1,1,1,1"
+							Width="345"
+							BorderBrush="Black"
+							Height="164"
+							VerticalAlignment="Top"
+							IsEnabled="True">
+							<StackPanel
+								x:Name="FindStatData"
+								Orientation="Vertical"
+								VerticalAlignment="Top"
+								Width="344"
+								Height="160"
+								IsEnabled="True">
+								<!-- ================= StatsData =================-->
+								<Button
+									Content="Удалить пользователя"
+									FontSize="14"
+									x:Name="DeleteButton"
+									Height="28"
+									Width="212"
+									Click="DeleteButton_Click"
+									Margin="0,9,0,0" />
+								<Button
+									Margin="0,10,0,0"
+									FontSize="14"
+									Content="Создать пользователя"
+									x:Name="CreateButton"
+									Height="28"
+									Click="CreateButton_Click"
+									Width="212" />
+								<Button
+									Margin="0,10,0,0"
+									FontSize="14"
+									Content="Применить изменения"
+									x:Name="SubmitChangesButton"
+									Height="28"
+									Click="SubmitChangesButton_Click"
+									Width="212" />
+								<Button
+									Margin="0,10,0,0"
+									FontSize="14"
+									Content="Запустить игру"
+									x:Name="StartGameButton"
+									Height="28"
+									Width="212"
+									Click="StartGameButton_Click"
+									Visibility="Hidden" />
+							</StackPanel>
+						</Border>
+					</StackPanel>
+					<!-- ================= /ProfileData =================-->
+					<StackPanel
+						x:Name="FindMyGames"
+						Margin="0,10,0,0"
+						Width="722"
+						Orientation="Vertical"
+						Height="211"
+						IsEnabled="False">
+						<Label
+							Width="680"
+							Content="Игры пользователя" />
+						<DataGrid
+							x:Name="FindMyGamesGrid"
+							RowHeight="40"
+							VerticalScrollBarVisibility="Auto"
+							Width="704"
+							Height="185">
+							<DataGrid.Columns>
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="ID"
+									Width="40"
+									FontSize="14"
+									Binding="{Binding Path = P1}"
+									ContextMenuService.IsEnabled="True" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="Тип игры"
+									Width="60"
+									FontSize="14"
+									Binding="{Binding Path = P2}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									FontSize="14"
+									Header="Призовой фонд"
+									Width="100"
+									Binding="{Binding Path = P3}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									FontSize="14"
+									Header="Стоимость билета"
+									Width="110"
+									Binding="{Binding Path = P4}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="Выигрышная комбинация"
+									Width="157"
+									FontSize="14"
+									Binding="{Binding Path = P5}" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="Моя комбинация"
+									Width="157"
+									Binding="{Binding Path = P7}"
+									FontSize="14" />
+								<DataGridTextColumn
+									IsReadOnly="true"
+									Header="Статус"
+									Width="82"
+									Binding="{Binding Path = P6}"
+									FontSize="14" />
+							</DataGrid.Columns>
+						</DataGrid>
+					</StackPanel>
+					<!-- ================= MyGames ================= -->
+				</StackPanel>
+			</TabItem>
+		</TabControl>
+	</Grid>
+</Window>

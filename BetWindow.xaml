@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="LotteryElite.BetWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Ticket Options"
+	Height="457"
+	Width="480"
+	ResizeMode="NoResize">
+	<Grid
+		Background="#FF98C4E0"
+		Width="471"
+		Height="427">
+		<Border
+			BorderThickness="1,1,1,1"
+			BorderBrush="Black"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			Margin="94,50,94,94"
+			Background="#FFCAF7F3">
+			<StackPanel
+				Grid.Column="0"
+				Grid.Row="0"
+				x:Name="ButtStack"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Bottom"
+				Margin="0,0,0,0"
+				Orientation="Vertical"
+				Background="{x:Null}"
+				Height="283"
+				Width="283"
+				RenderTransformOrigin="0.5,0.5" />
+		</Border>
+		<Button
+			Content="Купить билет"
+			Height="26"
+			Width="159"
+			FontSize="14"
+			Click="BetButton_Click"
+			x:Name="BetButton"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="45,0,0,22" />
+		<Button
+			Content="Закрыть"
+			Width="159"
+			Height="26"
+			FontSize="14"
+			Click="ExitButton_Click"
+			x:Name="ExitButton"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,379,45,0" />
+		<TextBlock
+			TextAlignment="Center"
+			TextTrimming="None"
+			TextWrapping="NoWrap"
+			FontSize="16"
+			Foreground="#FF5A33E8"
+			x:Name="StatusBox"
+			Width="308"
+			Height="34"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="81.5,8,0,0">
+			<Run />
+		</TextBlock>
+	</Grid>
+</Window>
