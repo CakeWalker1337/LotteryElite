@@ -24,17 +24,21 @@ Moderator can make all admin-operations except editing permission of users and s
 
 Picture 1 - User profile
 
+
 ![alt text](https://raw.github.com/CakeWalker1337/LotteryElite/master/github/screenshots/2.jpg)
 
 Picture 2 - List of games
+
 
 ![alt text](https://raw.github.com/CakeWalker1337/LotteryElite/master/github/screenshots/3.jpg)
 
 Picture 3 - Admin-panel
 
+
 ![alt text](https://raw.github.com/CakeWalker1337/LotteryElite/master/github/screenshots/4.jpg)
 
 Picture 4 - Ticket options (when user is buying ticket)
+
 
 ## Other information
 
